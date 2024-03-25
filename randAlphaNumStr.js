@@ -1,14 +1,13 @@
-function alphaNumericString(length)
-{
-    let str = "";
+function alphaNumericString(givenlength) {
+  let str = ''
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
-    for(let i=0; i<length; i++)
-    {
-        str += Math.floor(Math.random()).toString()
-    }
+  for (let i = 0; i < givenlength; i++) {
+    str += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
 
-    return str
+  return str
 }
 
-let resultStr = alphaNumericString(5);
+let resultStr = alphaNumericString(18)
 console.log(resultStr)
